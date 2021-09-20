@@ -40,19 +40,23 @@
             width: 30%;
         }
 
-        .site-nav {
+        .menu{
             width: 40%;
+            font-size: x-large;
             display: flex;
             justify-content: space-around;
             align-items: center;
+            color: rgb(20, 156, 190);
         }
 
-        .site-nav>a {
+        .menu>a {
             color: inherit;
-            text-decoration: none;
+            text-decoration: underline;
+            text-anchor: inherit;
+            font-weight: bold;
         }
 
-        .site-nav>a:hover {
+        .menu>a:hover {
             text-decoration: underline;
             font-weight: bold;
         }
@@ -83,10 +87,11 @@
             margin-bottom: 100px;
         }
 
-        .seccion-noticias,
-        .header-container{
+        .seccion-noticias{
             background-color: #f7f7f7
-
+        }     
+        .header-container{
+            background-color: #24d1c815 
         }
 
         .seccion-noticias {
@@ -139,33 +144,29 @@
     </style>
 
 <!-- inicio encabezado del sitio -->
-    <div class="header-section">
+    <header class="header-section">
         <div class="header-container">
 
             <div class="site-title">
-                <h1>Easy Agenda+</h1>
+                <h1>EasyAgenda+</h1>
             </div>
             
             <!-- Inicio menú navegación -->
-            <ul class="site-nav">
-                <a href="#">Inicio</a>
-                <a href="#services">Servicios</a>
-                <a href="#news">Noticias</a>
-                <a href="#team">Nuestro equipo</a>
-            </ul>
+            <nav class="menu">
+                <a href="#">Login</a>
+                <a href="#Calendario">Calendario</a>
+            </nav>
+        </div> 
             <!-- Fin menú navegación -->
 
-            
-            
-            <div class="logo-container">
-                <img class="logo-container__site-logo" src="./logomision.png" alt="Logo MisionTic 2022">
-            </div>
+        <div class="logo-container">
+            <img class="logo-container__site-logo" src="./logo.png" alt="Logo EasyAgenda+">
         </div>
             
         <div class="banner">
             <img src="./banner.jpg" alt="A banner image">
         </div>
-    </div>
+    </header>
 <!-- fin encabezado del sitio -->
 
 
