@@ -1,365 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primera pagina web</title>
-</head>
+    <head>
+            <meta charset="UTF-8"/>
+            <meta name="description" content="Accede a tu Agenda de manera Online y desde cualquier lugar del mundo, gestiona tus citas de forma fácil y rápida"/>
+            <meta name="robots" content="index,follow"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            <title>Easy Agenda+</title>
+            <link rel="stylesheet" href="css/style.css">
+    </head>
 
-<body>
-    <style>
-        * {
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+    <body>
+        <style>
+            * {
+                box-sizing: border-box;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
 
-        body {
-            max-width: 1400px;
-            min-width: 375px;
-            margin-right: auto;
-            margin-left: auto;
-            margin-top: 0;
-            margin-bottom: 0;
-            color: #222222;
-        }
+            body {
+                max-width: 1400px;
+                min-width: 375px;
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 0;
+                margin-bottom: 0;
+                color: #222222;
+            }
 
-        .header-section {
-            margin-bottom: 100px;
-        }
+            .header-section {
+                margin-bottom: 100px;
+            }
 
-        .header-container{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            text-align: center;
+            .header-container{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                text-align: center;
 
-        }
+            }
 
-        .site-title {
-            width: 30%;
-            color: rgb(20, 156, 190);
-        }
+            .site-title {
+                width: 30%;
+                color: rgb(20, 156, 190);
+            }
 
-        .menu{
-            width: 40%;
-            font-size: x-large;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            color: rgb(20, 156, 190);
-        }
+            .menu{
+                width: 40%;
+                font-size: x-large;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                color: rgb(20, 156, 190);
+            }
 
-        .menu>a {
-            color: inherit;
-            text-decoration: underline;
-            text-anchor: inherit;
-            font-weight: bold;
-        }
+            .menu>a {
+                color: inherit;
+                text-decoration: underline;
+                text-anchor: inherit;
+                font-weight: bold;
+            }
 
-        .menu>a:hover {
-            text-decoration: underline;
-            font-weight: bold;
-        }
+            .menu>a:hover {
+                text-decoration: underline;
+                font-weight: bold;
+            }
 
-        .logo-container {
-            width: 30%;
-            padding-left: 40%;
-        }
+            .logo-container {
+                width: 30%;
+                padding-left: 40%;
+            }
 
-        .logo-container__site-logo {
-            height: 80px;
-        }
+            .logo-container__site-logo {
+                height: 80px;
+            }
 
-        .banner {
-            width: 100%;
-        }
+            .banner {
+                width: 100%;
+            }
 
-        .banner>img {
-            width: 100%;
-            height: 200px;
-            max-width: 1400px;
-            object-fit: cover;
-        }
+            .banner>img {
+                width: 100%;
+                height: 200px;
+                max-width: 1400px;
+                object-fit: cover;
+            }
 
-        .services-section,
-        .seccion-noticias,
-        .seccion-equipo {
-            display: flex;
-            justify-content: center;
-            <!-- flex-wrap: wrap; -->
-            
-        }
+            .services-section,
+            .seccion-noticias,
+            .seccion-equipo {
+                display: flex;
+                justify-content: center;
+                <!-- flex-wrap: wrap; -->
+                
+            }
 
-        .seccion-noticias{
-            background-color: #f7f7f7
-        }     
-        .header-container{
-            background-color: #24d1c815 
-        }
+            .seccion-noticias{
+                background-color: #f7f7f7
+            }     
+            .header-container{
+                background-color: #24d1c815 
+            }
 
-        .seccion-noticias {
-            flex-wrap: wrap;
-        }
+            .seccion-noticias {
+                flex-wrap: wrap;
+            }
 
-        .services-info {
-            padding: 20px;
-            text-align: center;
-            border: solid;
-            border-width: 1px;
-            border-color: #25294f;
-        }
+            .services-info {
+                padding: 20px;
+                text-align: center;
+                border: solid;
+                border-width: 1px;
+                border-color: #25294f;
+            }
 
-        .news-info {
-            width: 50%;
-            padding: 20px;
-        }
+            .news-info {
+                width: 50%;
+                padding: 20px;
+            }
 
-        .news-header {
-            display: flex;
-            justify-content: space-around;
-        }
+            .news-header {
+                display: flex;
+                justify-content: space-around;
+            }
 
-        .news-info__title {
-            align-self: center;
-        }
+            .news-info__title {
+                align-self: center;
+            }
 
-        .seccion-pie {
-            background-color: #25294f;
-            height: 200px;
-            display: flex;
-            color: white;
-            justify-content: space-evenly;
-        }
+            .seccion-pie {
+                background-color: #25294f;
+                height: 200px;
+                display: flex;
+                color: white;
+                justify-content: space-evenly;
+            }
 
-        .services-info__imagen {
-            border-radius: 50%;
-            margin-right: auto;
-            margin-left: auto;
-        }
+            .services-info__imagen {
+                border-radius: 50%;
+                margin-right: auto;
+                margin-left: auto;
+            }
 
-        .team-info{
-            width: 100%;
-            max-width: 25%;
-            padding: 10px;
-            background-color: #0ec9c90e;
-            margin-inline: 3px;
-            margin-bottom: 10px;
-        }
+            .team-info{
+                width: 100%;
+                max-width: 25%;
+                padding: 10px;
+                background-color: #0ec9c90e;
+                margin-inline: 3px;
+                margin-bottom: 10px;
+            }
 
-        .team-info__imagen{
-            width: 100%;
-            max-width: 200px;
-            margin-top: 15px;
-        }
-    </style>
+            .team-info__imagen{
+                width: 100%;
+                max-width: 200px;
+                margin-top: 15px;
+            }
+        </style>
 
-<!-- inicio encabezado del sitio -->
-    <header class="header-section">
-        <div class="header-container">
+    <!-- inicio encabezado del sitio -->
+        <header class="header-section">
+            <div class="header-container">
 
-            <div class="site-title">
-                <h1>EasyAgenda+</h1>
+                <div class="site-title">
+                    <h1>EasyAgenda+</h1>
+                </div>
+                
+                <!-- Inicio menú navegación -->
+                <nav class="menu">
+                    <a href="#">Login</a>
+                    <a href="#Calendario">Calendario</a>
+                </nav>
+            </div> 
+                <!-- Fin menú navegación -->
+
+            <div class="logo-container">
+                <img class="logo-container__site-logo" src="./logo.png" alt="Logo EasyAgenda+">
             </div>
-            
-            <!-- Inicio menú navegación -->
-            <nav class="menu">
-                <a href="#">Login</a>
-                <a href="#Calendario">Calendario</a>
-            </nav>
-        </div> 
-            <!-- Fin menú navegación -->
-
-        <div class="logo-container">
-            <img class="logo-container__site-logo" src="./logo.png" alt="Logo EasyAgenda+">
-        </div>
-            
-        <div class="banner">
-            <img src="./banner.jpg" alt="A banner image">
-        </div>
-    </header>
-<!-- fin encabezado del sitio -->
-
-
-    <!-- inicio contenido principal -->
-    <div>
-
-
-        <h1>Servicios</h1>
-        <!-- inicio sección de servicios -->
-        <div id="servicios" class="services-section">
-            <article class="services-info">
-                <img class="services-info__imagen" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqUbNKZ2Xk_AXDQWxxPt5jLGqE_MXLp6zffg&usqp=CAU" alt="">
-                <h2 class="services-info__title">Crea tu Propio Calendario</h2>
-                <p class="services-info__text">
-                    Puedes crear el calendario de trabajo de los turnos de los trabajadores de tu empresa o negocio para que tus clientes puedan elegir el horario disponible
-                    y con quien desean tener su turno.
-                </p>
-            </article>
-            <article class="services-info">
-                <img class="services-info__imagen" src="https://conceptodefinicion.de/wp-content/uploads/2015/08/administrar.jpg" alt="">
-                <h2 class="services-info__title">Administra tus Empleados</h2>
-                <p class="services-info__text">
-                    Puedes controlar los turnos y clientes de tus empleados con nuestro servicio, de manera rapida y eficaz gracias a nuestra base amplia base de datos.
-                </p>
-            </article>
-            <article class="services-info">
-                <img class="services-info__imagen" src="http://placeimg.com/200/200/people" alt="">
-                <h2 class="services-info__title">Genera Codigos para tus Citas</h2>
-                <p class="services-info__text">
-                    Podras generar un codigo unico para cada cita con el cual podras tener claridad de todos los servicios ofrecidos y control sobre los ingresos 
-                    de tu negocio de manera facil.
-                </p>
-            </article>
-        </div>
-        <!-- fin sección de servicios -->
-
-
-
-        <h2>Noticias</h2>
-        <!-- inicio sección de noticias -->
-        <div id="noticias" class="seccion-noticias">
-            <article class="news-info">
-                <div class="news-header">
-                    <img class="news-info__imagen" src="img_te_vez_bien.jpg" alt="">
-                    <h3 class="news-info__title"> ¿Te verías bien con el pelo corto? </h3>
-                </div>
-                <p class="news-info__text">
-                    <b>Pasos:</b><br><br>
-
-                    <b>1.</b> Ubica un lápiz de forma horizontal por debajo de tu barbilla.<br>
-                    <b>2.</b>Sin cambiar la posición del lápiz de tu barbilla, sujeta una regla por debajo de la oreja que quede en forma perpendicular con el lápiz.<br>
-                    <b>3.</b>Mide la distancia en la regla desde el lápiz hasta la oreja.<br><br>
-
-                    <b>Resultados:</b><br><br>
-
-                    Si la distancia es <b>menor a 5,7 centímetros</b> es una muy buena señal, pues esto significa que si te cortaras el cabello <b>te quedaría genial</b>, por lo cual no deberías pensarlo más y <b>tomar de una vez por todas esta decisión</b>.
                 
-                </p>
-            </article>
+            <div class="banner">
+                <img src="./banner.jpg" alt="A banner image">
+            </div>
+        </header>
+    <!-- fin encabezado del sitio -->
 
-            <article class="news-info">
-                <div class="news-header">
-                    <img class="news-info__imagen" src="elegir_champu.jpg" alt="">
-                    <h3 class="news-info__title">¿Cómo elegir el champú ideal para cada tipo de pelo?</h3>
-                </div>
-                <p class="news-info__text">
-                    <b>Si tienes pelo rizado</b><br><br>
-                    Necesitas un producto que te ayude a cuidar la elasticidad y <b><FONT COLOR="brown">controlar el volumen a través de la humectación</FONT></b>; lo recomendable es que contengan aceites como <u><FONT COLOR="brown">nuez, albaricoque, jojoba, coco y oliva</FONT></u>.<br><br>
-    
-                    <b>Si tienes pelo lacio</b><br><br>
-                    Debes buscar un champú que además de dar vida, pueda controlar también el frizz; aquellos que contienen colágeno, proteínas y/o keratina es una gran opción, pues penetran la cutícula dejándolo mucho más <u><FONT COLOR="brown">suave y controlable</FONT></u>.
-    
-                </p>
-            </article>
 
-            <article class="news-info">
-                <div class="news-header">
-                    <img class="news-info__imagen" src="cada_cuanto_cortar.png" alt="">
-                    <h3 class="news-info__title">¿Cada cuánto debería una mujer cortar su cabello?</h3>
-                </div>
-                <p class="news-info__text">
-                    <b>Si tienes pelo corto</b><br><br>
-                    Lo recomendable es cortarlo cada tres semanas, teniendo en cuenta que el cabello crece un poco más de un centímetro mensualmente; <br><br>
+        <!-- inicio contenido principal -->
+        <div>
+
+
+            <h1>Servicios</h1>
+            <!-- inicio sección de servicios -->
+            <div id="servicios" class="services-section">
+                <article class="services-info">
+                    <img class="services-info__imagen" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqUbNKZ2Xk_AXDQWxxPt5jLGqE_MXLp6zffg&usqp=CAU" alt="">
+                    <h2 class="services-info__title">Crea tu Propio Calendario</h2>
+                    <p class="services-info__text">
+                        Puedes crear el calendario de trabajo de los turnos de los trabajadores de tu empresa o negocio para que tus clientes puedan elegir el horario disponible
+                        y con quien desean tener su turno.
+                    </p>
+                </article>
+                <article class="services-info">
+                    <img class="services-info__imagen" src="https://conceptodefinicion.de/wp-content/uploads/2015/08/administrar.jpg" alt="">
+                    <h2 class="services-info__title">Administra tus Empleados</h2>
+                    <p class="services-info__text">
+                        Puedes controlar los turnos y clientes de tus empleados con nuestro servicio, de manera rapida y eficaz gracias a nuestra base amplia base de datos.
+                    </p>
+                </article>
+                <article class="services-info">
+                    <img class="services-info__imagen" src="http://placeimg.com/200/200/people" alt="">
+                    <h2 class="services-info__title">Genera Codigos para tus Citas</h2>
+                    <p class="services-info__text">
+                        Podras generar un codigo unico para cada cita con el cual podras tener claridad de todos los servicios ofrecidos y control sobre los ingresos 
+                        de tu negocio de manera facil.
+                    </p>
+                </article>
+            </div>
+            <!-- fin sección de servicios -->
+
+
+
+            <h2>Noticias</h2>
+            <!-- inicio sección de noticias -->
+            <div id="noticias" class="seccion-noticias">
+                <article class="news-info">
+                    <div class="news-header">
+                        <img class="news-info__imagen" src="img_te_vez_bien.jpg" alt="">
+                        <h3 class="news-info__title"> ¿Te verías bien con el pelo corto? </h3>
+                    </div>
+                    <p class="news-info__text">
+                        <b>Pasos:</b><br><br>
+
+                        <b>1.</b> Ubica un lápiz de forma horizontal por debajo de tu barbilla.<br>
+                        <b>2.</b>Sin cambiar la posición del lápiz de tu barbilla, sujeta una regla por debajo de la oreja que quede en forma perpendicular con el lápiz.<br>
+                        <b>3.</b>Mide la distancia en la regla desde el lápiz hasta la oreja.<br><br>
+
+                        <b>Resultados:</b><br><br>
+
+                        Si la distancia es <b>menor a 5,7 centímetros</b> es una muy buena señal, pues esto significa que si te cortaras el cabello <b>te quedaría genial</b>, por lo cual no deberías pensarlo más y <b>tomar de una vez por todas esta decisión</b>.
                     
-                    <b>Si tienes cabello largo</b><br><br>
-                    Lo ideal es que lo cortes cada ocho semanas si tienes algún tipo de tinte, o tres meses si es completamente natural; esto debes acompañarlo siempre con el uso de mascarillas o tratamientos para su bienestar.
+                    </p>
+                </article>
 
-                </p>
-            </article>
+                <article class="news-info">
+                    <div class="news-header">
+                        <img class="news-info__imagen" src="elegir_champu.jpg" alt="">
+                        <h3 class="news-info__title">¿Cómo elegir el champú ideal para cada tipo de pelo?</h3>
+                    </div>
+                    <p class="news-info__text">
+                        <b>Si tienes pelo rizado</b><br><br>
+                        Necesitas un producto que te ayude a cuidar la elasticidad y <b><FONT COLOR="brown">controlar el volumen a través de la humectación</FONT></b>; lo recomendable es que contengan aceites como <u><FONT COLOR="brown">nuez, albaricoque, jojoba, coco y oliva</FONT></u>.<br><br>
+        
+                        <b>Si tienes pelo lacio</b><br><br>
+                        Debes buscar un champú que además de dar vida, pueda controlar también el frizz; aquellos que contienen colágeno, proteínas y/o keratina es una gran opción, pues penetran la cutícula dejándolo mucho más <u><FONT COLOR="brown">suave y controlable</FONT></u>.
+        
+                    </p>
+                </article>
 
-            <article class="news-info">
-                <div class="news-header">
-                    <img class="news-info__imagen" src="carnashian.jpg" alt="">
-                    <h3 class="news-info__title">El corte de pelo ‘bob Kardashian’ ha vuelto</h3>
-                </div>
-                <p class="news-info__text">
-                    Hace exactamente tres años que las Kardashian consiguieron que un <u><FONT COLOR="red">corte de pelo</FONT></u> de toda la vida -el blunt bob, carré o media melena recta- se convirtiera en <u><FONT COLOR="red">el corte de pelo del momento</FONT></u>.
+                <article class="news-info">
+                    <div class="news-header">
+                        <img class="news-info__imagen" src="cada_cuanto_cortar.png" alt="">
+                        <h3 class="news-info__title">¿Cada cuánto debería una mujer cortar su cabello?</h3>
+                    </div>
+                    <p class="news-info__text">
+                        <b>Si tienes pelo corto</b><br><br>
+                        Lo recomendable es cortarlo cada tres semanas, teniendo en cuenta que el cabello crece un poco más de un centímetro mensualmente; <br><br>
+                        
+                        <b>Si tienes cabello largo</b><br><br>
+                        Lo ideal es que lo cortes cada ocho semanas si tienes algún tipo de tinte, o tres meses si es completamente natural; esto debes acompañarlo siempre con el uso de mascarillas o tratamientos para su bienestar.
+
+                    </p>
+                </article>
+
+                <article class="news-info">
+                    <div class="news-header">
+                        <img class="news-info__imagen" src="carnashian.jpg" alt="">
+                        <h3 class="news-info__title">El corte de pelo ‘bob Kardashian’ ha vuelto</h3>
+                    </div>
+                    <p class="news-info__text">
+                        Hace exactamente tres años que las Kardashian consiguieron que un <u><FONT COLOR="red">corte de pelo</FONT></u> de toda la vida -el blunt bob, carré o media melena recta- se convirtiera en <u><FONT COLOR="red">el corte de pelo del momento</FONT></u>.
+                    
+                    </p>
+                </article>
+
+            </div>
+            <!-- fin sección de noticias -->
+
+
+            <h1>Equipo</h1>
+            <!-- inicio sección de equipo -->
+            <section id="team" class="seccion-equipo">
+
+                <article class="team-info">
+                    <img class="team-info__imagen" src="Images/Foto_Jonathan_Rueda.png" alt="">
+                    <h2 class="team-info__title">Jonathan Rueda</h2>
+                    <p class="team-info__text">
+                        Estudiante de Ing. Industrial, con gusto por el deporte y participando en el programa del MinTic Ruta 2, de Bogotá y viviendo en Pereira.
+                    </p>
+                </article>
+
+                <article class="team-info">
+                    <img class="team-info__imagen" src="Images/Foto_Genny_Calderon.png" alt="">
+                    <h2 class="team-info__title">Genny Calderon</h2>
+                    <p class="team-info__text">
+                        Ingeniera Química, especialista en SST, de Bogotá y actualmente participando en el programa del MinTic Ruta 2.
+                    </p>
+                </article>
+
+                <article class="team-info">
+                    <img class="team-info__imagen" src="Images/Foto_Mayte_Carvajal.png" alt="">
+                    <h2 class="team-info__title">Mayte Carvajal</h2>
+                    <p class="team-info__text">
+                        Tripulante del programa del MinTic Ruta 2, de Pereira.
+                    </p>
+                </article>
+
+                <article class="team-info">
+                    <img class="team-info__imagen" src="Images/Foto_Jair_Salcedo.png" alt="">
+                    <h2 class="team-info__title">Jair Salcedo</h2>
+                    <p class="team-info__text">
+                        Tripulante del programa del MinTic Ruta 2, de Pereira.
+                    </p>
+                </article>
                 
-                </p>
-            </article>
+                <article class="team-info">
+                    <img class="team-info__imagen" src="Images/Foto_Oscar_Valendia.png" alt="">
+                    <h2 class="team-info__title">Oscar Velandia</h2>
+                    <p class="team-info__text">
+                        Tripulante del programa del MinTic Ruta 2, de Pereira.
+                    </p>
+                </article>
+                
+                <article class="team-info">
+                    <img class="team-info__imagen" src="Images/Foto_Harold_Sequeda.png" alt="">
+                    <h2 class="team-info__title">Harold Sequeda</h2>
+                    <p class="team-info__text">
+                        Tripulante del programa del MinTic Ruta 2, de Cúcuta.
+                    </p>
+                </article>
+
+            </section>
+            <!-- fin sección de equipo -->
 
         </div>
-        <!-- fin sección de noticias -->
+        <!-- fin contenido principal -->
 
-
-        <h1>Equipo</h1>
-        <!-- inicio sección de equipo -->
-        <section id="team" class="seccion-equipo">
-
-            <article class="team-info">
-                <img class="team-info__imagen" src="Images/Foto_Jonathan_Rueda.png" alt="">
-                <h2 class="team-info__title">Jonathan Rueda</h2>
-                <p class="team-info__text">
-                    Estudiante de Ing. Industrial, con gusto por el deporte y participando en el programa del MinTic Ruta 2, de Bogotá y viviendo en Pereira.
-                </p>
+        <!-- Inicio pie del sitio -->
+        <div class="seccion-pie">
+            <article>
+                <h2>Contacto</h2>
+                <p>Facebook @EasyAgenda+</p> </a>
+                <p>Instagram @EasyAgenda+</p> </a>
+                <p>EasyAgenda+.com</p> </a>
+                <img class="logo-container__site-logo" src="./fb.ico" alt="">
+                <img class="logo-container__site-logo" src="./instagram.ico" alt="">
             </article>
-
-            <article class="team-info">
-                <img class="team-info__imagen" src="Images/Foto_Genny_Calderon.png" alt="">
-                <h2 class="team-info__title">Genny Calderon</h2>
-                <p class="team-info__text">
-                    Ingeniera Química, especialista en SST, de Bogotá y actualmente participando en el programa del MinTic Ruta 2.
-                </p>
+            <article>
+                <h2>Terminos de uso</h2>
+                <p>Politicas de Privacidad</p>
+                <p>Preguntas Frecuentes</p>
+                <p>Manual de Uso</p>
             </article>
+        </div>
+        <!-- fin pie del sitio -->
 
-            <article class="team-info">
-                <img class="team-info__imagen" src="Images/Foto_Mayte_Carvajal.png" alt="">
-                <h2 class="team-info__title">Mayte Carvajal</h2>
-                <p class="team-info__text">
-                    Tripulante del programa del MinTic Ruta 2, de Pereira.
-                </p>
-            </article>
-
-            <article class="team-info">
-                <img class="team-info__imagen" src="Images/Foto_Jair_Salcedo.png" alt="">
-                <h2 class="team-info__title">Jair Salcedo</h2>
-                <p class="team-info__text">
-                    Tripulante del programa del MinTic Ruta 2, de Pereira.
-                </p>
-            </article>
-            
-            <article class="team-info">
-                <img class="team-info__imagen" src="Images/Foto_Oscar_Valendia.png" alt="">
-                <h2 class="team-info__title">Oscar Velandia</h2>
-                <p class="team-info__text">
-                    Tripulante del programa del MinTic Ruta 2, de Pereira.
-                </p>
-            </article>
-            
-            <article class="team-info">
-                <img class="team-info__imagen" src="Images/Foto_Harold_Sequeda.png" alt="">
-                <h2 class="team-info__title">Harold Sequeda</h2>
-                <p class="team-info__text">
-                    Tripulante del programa del MinTic Ruta 2, de Cúcuta.
-                </p>
-            </article>
-
-        </section>
-        <!-- fin sección de equipo -->
-
-    </div>
-    <!-- fin contenido principal -->
-
-    <!-- Inicio pie del sitio -->
-    <div class="seccion-pie">
-        <article>
-            <h2>Contacto</h2>
-            <p>Facebook @EasyAgenda+</p> </a>
-            <p>Instagram @EasyAgenda+</p> </a>
-            <p>EasyAgenda+.com</p> </a>
-            <img class="logo-container__site-logo" src="./fb.ico" alt="">
-            <img class="logo-container__site-logo" src="./instagram.ico" alt="">
-        </article>
-        <article>
-            <h2>Terminos de uso</h2>
-            <p>Politicas de Privacidad</p>
-            <p>Preguntas Frecuentes</p>
-            <p>Manual de Uso</p>
-        </article>
-    </div>
-    <!-- fin pie del sitio -->
-
-</body>
+    </body>
 
 </html>
