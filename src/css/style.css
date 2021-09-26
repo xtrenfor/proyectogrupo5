@@ -76,7 +76,7 @@ body {
 .seccion-equipo {
     display: flex;
     justify-content: center;
-    <!-- flex-wrap: wrap; -->
+    /*flex-wrap: wrap;*/
     
 }
 
@@ -140,3 +140,4 @@ body {
     width: 100%;
     max-width: 200px;
     margin-top: 15px;
+}
