@@ -86,7 +86,8 @@
         .seccion-noticias,
         .seccion-equipo {
             display: flex;
-            margin-bottom: 100px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .seccion-noticias{
@@ -137,14 +138,14 @@
         }
 
         .team-info{
-            width: 25%;
-            padding: 15px;
+            width: 100%;
+            max-width: 25%;
+            padding: 10px;
         }
 
         .team-info__imagen{
-            display: block;
-            margin-right: auto;
-            margin-left: auto;
+            width: 100%;
+            max-width: 200px;
         }
     </style>
 
@@ -320,6 +321,15 @@
             <article class="team-info">
                 <img class="team-info__imagen" src="Images/Foto_Oscar_Valendia.png" alt="">
                 <h2 class="team-info__title">Oscar Velandia</h2>
+                <p class="team-info__text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora quas voluptate magni repellat eligendi! Inventore voluptas
+                    voluptates quia voluptatum expedita, ducimus delectus dolore eaque maiores iusto modi eum aut corporis?
+                </p>
+            </article>
+            
+            <article class="team-info">
+                <img class="team-info__imagen" src="Images/Foto_Harold_Sequeda.png" alt="">
+                <h2 class="team-info__title">Harold Sequeda</h2>
                 <p class="team-info__text">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora quas voluptate magni repellat eligendi! Inventore voluptas
                     voluptates quia voluptatum expedita, ducimus delectus dolore eaque maiores iusto modi eum aut corporis?
