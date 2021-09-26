@@ -94,14 +94,14 @@ body {
 .services-info {
     padding: 20px;
     text-align: center;
-    border: solid;
-    border-width: 1px;
-    border-color: #25294f;
 }
 
 .news-info {
     width: 50%;
     padding: 20px;
+    border: solid;
+    border-width: 1px;
+    border-color: #25294f;
 }
 
 .news-header {
