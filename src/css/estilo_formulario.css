@@ -1,0 +1,21 @@
+body{
+    background-color: cornsilk;
+}
+
+.seccion-pie {
+    background-color: #25294f;
+    height: 200px;
+    display: flex;
+    color: white;
+    justify-content: space-evenly;
+}
+
+.form_experimento{
+   max-width: 30em; 
+   padding: 1.5em;
+   margin: 0 auto;
+   font-weight: bold;
+   border-radius: 0.5em;
+   box-shadow: inset 1px 1px 22px 4px;
+}
+
