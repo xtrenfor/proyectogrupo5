@@ -8,7 +8,7 @@ import profesional from '../views/profesional.vue'
 import agendar from '../views/agendar.vue'
 import servicio from '../views/servicio.vue'
 import signin from '../views/signin.vue'
-import signup from '../views/signup.vue'
+
 
 
 Vue.use(VueRouter)
@@ -49,11 +49,7 @@ const routes = [
           name: 'signin',
           component: signin
     },
-  {
-      path: '/signup',
-        name: 'signup',
-        component: signup
- },
+ 
  {
   path: '/agendar',
     name: 'agendar',

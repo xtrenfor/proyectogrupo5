@@ -1,36 +1,52 @@
 <template>
+<v-container>
+    <H3> Formulario servicio </H3>
+
   <v-form
     ref="form"
     v-model="valid"
     lazy-validation
   >
+
+
     <v-text-field
-      v-model="name"
-      :counter="10"
-      :rules="nameRules"
-      label="Name"
+      v-model="codigo"
+      :counter="4"
+      :rules="codigoRules"
+      label="Codigo servicio"
       required
     ></v-text-field>
 
     <v-text-field
-      v-model="email"
-      :rules="emailRules"
-      label="E-mail"
+      v-model="nombres"
+      :counter="12"
+      :rules="nombresRules"
+      label="Nombre servicio"
       required
     ></v-text-field>
 
-    <v-select
-      v-model="select"
-      :items="items"
-      :rules="[v => !!v || 'Item is required']"
-      label="Item"
+    <v-text-field
+      v-model="costo"
+      :counter="6"
+      :rules="costoRules"
+      label="Costo servicio"
       required
-    ></v-select>
+    ></v-text-field>
+
+<v-text-field
+      v-model="tiempo"
+      :counter="3"
+      :rules="tiempoRules"
+      label="tiempo del servicio"
+      required
+    ></v-text-field>
+    
+
 
     <v-checkbox
       v-model="checkbox"
-      :rules="[v => !!v || 'You must agree to continue!']"
-      label="Do you agree?"
+      :rules="[v => !!v || 'Selecciona para continuar!']"
+      label="Deseas continuar?"
       required
     ></v-checkbox>
 
@@ -40,59 +56,57 @@
       class="mr-4"
       @click="validate"
     >
-      Validate
+      Guardar
     </v-btn>
 
     <v-btn
       color="error"
       class="mr-4"
-      @click="reset"
+      @click="$router.push('/')"
     >
-      Reset Form
+      Inicio
     </v-btn>
 
-    <v-btn
-      color="warning"
-      @click="resetValidation"
-    >
-      Reset Validation
-    </v-btn>
+   
   </v-form>
+  </v-container>
 </template>
 
 <script>
   export default {
     data: () => ({
       valid: true,
-      name: '',
-      nameRules: [
-        v => !!v || 'Name is required',
-        v => (v && v.length <= 10) || 'Name must be less than 10 characters',
+      codigo: '',
+      codigoRules: [
+        v => !!v || 'se requiere codigo',
+        v => (v && v.length == 4) || 'el codigo es de 4 caracteres',
       ],
-      email: '',
-      emailRules: [
-        v => !!v || 'E-mail is required',
-        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+
+      nombres: '',
+      nombresRules: [
+        v => !!v || 'se requiere nombre servicio',
       ],
-      select: null,
-      items: [
-        'Item 1',
-        'Item 2',
-        'Item 3',
-        'Item 4',
+
+      costo: '',
+      costoRules: [
+        v => !!v || 'se requiere costo del servicio',
+        v => (v && v.length <= 5) || 'el servicio no puede exceder cinco cifras',
       ],
-      checkbox: false,
+      tiempo: '',
+      tiempoRules: [
+        v => !!v || 'se requiere tiempo del servicio',
+        v => (v && v.length <= 3) || 'el tiempo no puede ser mayor a 999 minutos',
+      ],
+      
     }),
     methods: {
-      validate () {
-        this.$refs.form.validate()
+      Ingresar () {
+        this.$refs.form.Guardar()
       },
-      reset () {
-        this.$refs.form.reset()
+      Inicio () {
+        this.$refs.form.Inicio()
       },
-      resetValidation () {
-        this.$refs.form.resetValidation()
-      },
+    
     },
   }
 </script>

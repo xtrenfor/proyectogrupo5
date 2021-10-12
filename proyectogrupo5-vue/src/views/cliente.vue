@@ -1,36 +1,51 @@
 <template>
+<v-container>
+    <H3> Formulario cliente </H3>
+
   <v-form
     ref="form"
     v-model="valid"
     lazy-validation
   >
+
+
     <v-text-field
-      v-model="name"
-      :counter="10"
-      :rules="nameRules"
-      label="Name"
+      v-model="cedula"
+      :counter="13"
+      :rules="cedulaRules"
+      label="Cedula servicio"
       required
     ></v-text-field>
 
     <v-text-field
+      v-model="nombres"
+      :counter="15"
+      :rules="nombresRules"
+      label="Nombres y apellidos"
+      required
+    ></v-text-field>
+
+    <v-text-field
+      v-model="celular"
+      :counter="10"
+      :rules="celularRules"
+      label="Numero celular"
+      required
+    ></v-text-field>
+
+<v-text-field
       v-model="email"
       :rules="emailRules"
       label="E-mail"
       required
     ></v-text-field>
+    
 
-    <v-select
-      v-model="select"
-      :items="items"
-      :rules="[v => !!v || 'Item is required']"
-      label="Item"
-      required
-    ></v-select>
 
     <v-checkbox
       v-model="checkbox"
-      :rules="[v => !!v || 'You must agree to continue!']"
-      label="Do you agree?"
+      :rules="[v => !!v || 'Selecciona para continuar!']"
+      label="Deseas continuar?"
       required
     ></v-checkbox>
 
@@ -40,59 +55,57 @@
       class="mr-4"
       @click="validate"
     >
-      Validate
+      Ingresar
     </v-btn>
 
     <v-btn
       color="error"
       class="mr-4"
-      @click="reset"
+      @click="$router.push('/')"
     >
-      Reset Form
+      Inicio
     </v-btn>
 
-    <v-btn
-      color="warning"
-      @click="resetValidation"
-    >
-      Reset Validation
-    </v-btn>
+   
   </v-form>
+  </v-container>
 </template>
 
 <script>
   export default {
     data: () => ({
       valid: true,
-      name: '',
-      nameRules: [
-        v => !!v || 'Name is required',
-        v => (v && v.length <= 10) || 'Name must be less than 10 characters',
+      cedula: '',
+      cedulaRules: [
+        v => !!v || 'se requiere cedula',
+        v => (v && v.length <= 15) || 'la cedula es menor a 15 caracteres',
+      ],
+
+      nombres: '',
+      nombresRules: [
+        v => !!v || 'se requiere nombre servicio',
+      ],
+
+      celular: '',
+      celularRules: [
+        v => !!v || 'se requiere el numero de celular',
+        v => (v && v.length == 10) || 'el celular tiene 10 numeros',
       ],
       email: '',
       emailRules: [
-        v => !!v || 'E-mail is required',
-        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+        v => !!v || 'se requiere E-mail',
+        v => /.+@.+\..+/.test(v) || 'E-mail no valido',
       ],
-      select: null,
-      items: [
-        'Item 1',
-        'Item 2',
-        'Item 3',
-        'Item 4',
-      ],
-      checkbox: false,
+      
     }),
     methods: {
-      validate () {
-        this.$refs.form.validate()
+      Ingresar () {
+        this.$refs.form.Guardar()
       },
-      reset () {
-        this.$refs.form.reset()
+      Inicio () {
+        this.$refs.form.Inicio()
       },
-      resetValidation () {
-        this.$refs.form.resetValidation()
-      },
+    
     },
   }
 </script>

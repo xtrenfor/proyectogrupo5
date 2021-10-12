@@ -1,36 +1,62 @@
 <template>
+<v-container>
+    <H3> Formulario agendar </H3>
+
   <v-form
     ref="form"
     v-model="valid"
     lazy-validation
   >
+
+
     <v-text-field
-      v-model="name"
-      :counter="10"
-      :rules="nameRules"
-      label="Name"
+      v-model="cedula"
+      :counter="13"
+      :rules="cedulaRules"
+      label="Cedula cliente"
       required
     ></v-text-field>
 
     <v-text-field
-      v-model="email"
-      :rules="emailRules"
-      label="E-mail"
+      v-model="cedulap"
+      :counter="13"
+      :rules="cedulapRules"
+      label="Cedula profesional"
       required
     ></v-text-field>
 
-    <v-select
-      v-model="select"
-      :items="items"
-      :rules="[v => !!v || 'Item is required']"
-      label="Item"
+    <v-text-field
+      v-model="codigo"
+      :counter="4"
+      :rules="codigoRules"
+      label="codigo servicio"
       required
-    ></v-select>
+    ></v-text-field>
+
+    <v-text-field
+      v-model="fecha"
+      :counter="8"
+      :rules="fechaRules"
+      label="fecha"
+      required
+    ></v-text-field>
+
+    <v-text-field
+      v-model="Hora"
+      :counter="4"
+      :rules="horaRules"
+      label="hora"
+      required
+    ></v-text-field>
+
+
+    
+
 
     <v-checkbox
       v-model="checkbox"
-      :rules="[v => !!v || 'You must agree to continue!']"
-      label="Do you agree?"
+      :rules="[v => !!v || 'Selecciona para continuar!']"
+      label="Deseas continuar?"
       required
     ></v-checkbox>
 
@@ -40,51 +66,68 @@
       class="mr-4"
       @click="validate"
     >
-      Validate
+      Guardar
     </v-btn>
 
     <v-btn
       color="error"
       class="mr-4"
-      @click="reset"
+      @click="$router.push('/')"
     >
-      Reset Form
-    </v-btn>
+      Inicio
+    </v-btn 
+    >
+    
 
-    <v-btn
-      color="warning"
-      @click="resetValidation"
-    >
-      Reset Validation
-    </v-btn>
+   
   </v-form>
+  </v-container>
 </template>
 
 <script>
   export default {
     data: () => ({
       valid: true,
-      name: '',
-      nameRules: [
-        v => !!v || 'Name is required',
-        v => (v && v.length <= 10) || 'Name must be less than 10 characters',
+      cedula: '',
+      cedulaRules: [
+        v => !!v || 'se requiere cedula cliente',
+        v => (v && v.length <= 15) || 'la cedula es menor a 15 caracteres',
       ],
-      email: '',
-      emailRules: [
-        v => !!v || 'E-mail is required',
-        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
-      ]
+
+      cedulap: '',
+      cedulapRules: [
+        v => !!v || 'se requiere cedula profesional',
+        v => (v && v.length <= 15) || 'la cedula es menor a 15 caracteres',
+      ],
+
+      codigo: '',
+      codigoRules: [
+        v => !!v || 'se requiere el codigo servicio',
+        v => (v && v.length == 4) || 'el codigo tiene 4 numeros',
+      ],
+
+      fecha: '',
+      fechaRules: [
+        v => !!v || 'se requiere la fecha servicio',
+        v => (v && v.length == 8) || 'la fecha tiene 8 digitos',
+      ],
+
+      hora: '',
+      horaRules: [
+        v => !!v || 'se requiere la hora servicio',
+        v => (v && v.length == 4) || 'la hora tiene 4 digitos',
+      ],
+      
+      
     }),
     methods: {
-      validate () {
-        this.$refs.form.validate()
+      Guardar () {
+        this.$refs.form.Guardar()
       },
-      reset () {
-        this.$refs.form.reset()
+      Inicio () {
+        this.$refs.form.Inicio()
       },
-      resetValidation () {
-        this.$refs.form.resetValidation()
-      },
+    
     },
   }
 </script>

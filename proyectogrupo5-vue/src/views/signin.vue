@@ -1,16 +1,13 @@
 <template>
+<v-container>
+    <H3> Inicio de sessión </H3>
+
   <v-form
     ref="form"
     v-model="valid"
     lazy-validation
   >
-    <v-text-field
-      v-model="name"
-      :counter="10"
-      :rules="nameRules"
-      label="Name"
-      required
-    ></v-text-field>
+  
 
     <v-text-field
       v-model="email"
@@ -19,18 +16,19 @@
       required
     ></v-text-field>
 
-    <v-select
-      v-model="select"
-      :items="items"
-      :rules="[v => !!v || 'Item is required']"
-      label="Item"
+    <v-text-field
+      v-model="name"
+      :counter="8"
+      :rules="nameRules"
+      label="Contraseña"
       required
-    ></v-select>
+    ></v-text-field>
+
 
     <v-checkbox
       v-model="checkbox"
-      :rules="[v => !!v || 'You must agree to continue!']"
-      label="Do you agree?"
+      :rules="[v => !!v || 'Selecciona para continuar!']"
+      label="Deseas continuar?"
       required
     ></v-checkbox>
 
@@ -40,53 +38,48 @@
       class="mr-4"
       @click="validate"
     >
-      Validate
+      Guardar
     </v-btn>
 
     <v-btn
       color="error"
       class="mr-4"
-      @click="reset"
+      @click="$router.push('/')"
     >
-      Reset Form
+      Inicio
     </v-btn>
 
-    <v-btn
-      color="warning"
-      @click="resetValidation"
-    >
-      Reset Validation
-    </v-btn>
+   
   </v-form>
+  </v-container>
 </template>
 
 <script>
   export default {
     data: () => ({
       valid: true,
-        email: '',
+      
+      email: '',
       emailRules: [
-        v => !!v || 'E-mail is required',
-        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+        v => !!v || 'se requiere E-mail',
+        v => /.+@.+\..+/.test(v) || 'E-mail no valido',
       ],
       contraseña: '',
       nameRules: [
-        v => !!v || 'Necesito tu contraseña',
-        v => (v && v.length <= 7) || 'La contraseña debe tener 7 caracteres',
+        v => !!v || 'se requiere contraseña',
+        v => (v && v.length == 5) || 'la contraseña es de 5 caracteres',
       ],
-    
-
+  
+      checkbox: false,
     }),
     methods: {
       Ingresar () {
-        this.$refs.form.validate()
+        this.$refs.form.ingresar()
       },
-      reset () {
-        this.$refs.form.reset()
+      Inicio () {
+        this.$refs.form.Inicio()
       },
-      resetValidation () {
-        this.$refs.form.resetValidation()
-      },
+    
     },
   }
 </script>
