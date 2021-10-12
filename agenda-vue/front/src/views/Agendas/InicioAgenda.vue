@@ -59,7 +59,7 @@
                 <v-col order="first">
                   <v-card class="mx-auto" max-width="250" margin="50px">
                     <v-img
-                    src="https://cdn.vuetifyjs.com/images/cards/none.jpg"
+                    src="..\..\assets\Paso1.jpg"
                     height="200px"
                     ></v-img>
 
@@ -76,7 +76,7 @@
                 <v-col order="second">
                   <v-card class="mx-auto" max-width="250" margin="50px">
                     <v-img
-                    src="https://cdn.vuetifyjs.com/images/cards/none.jpg"
+                    src="..\..\assets\Paso2.jpg"
                     height="200px"
                     ></v-img>
                     <v-card-title class="card-header text-center">
@@ -92,7 +92,7 @@
                 <v-col order="last">
                   <v-card class="mx-auto" max-width="250" margin="50px">
                     <v-img
-                    src="https://cdn.vuetifyjs.com/images/cards/none.jpg"
+                    src="..\..\assets\Paso3.jpg"
                     height="200px"
                     ></v-img>
                     <v-card-title class="card-header text-center">
