@@ -87,9 +87,9 @@
               <div>           
               <p class=" font-weight-medium text-center">
                 <BR />
-                <v-icon medium color="green darken-2">mdi-calendar-multiselect</v-icon>
+                <v-icon medium color="blue darken-2">mdi-calendar-multiselect</v-icon>
                 Se representan en blanco los horarios disponibles.<BR /> 
-                <v-icon medium color="green darken-2">mdi-clock-alert-outline</v-icon>
+                <v-icon medium color="red darken-2">mdi-clock-alert-outline</v-icon>
                 Nuestro horario de atención es de 8:00am a 7:00pm. <BR /><BR />
                 <v-icon medium color="green darken-2">mdi-phone</v-icon>
                 Tras elegir el día y la hora de tu cita comunícate al 123 45 67 para programarla.<BR /> 
