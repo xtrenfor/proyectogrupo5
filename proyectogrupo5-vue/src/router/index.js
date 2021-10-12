@@ -1,15 +1,67 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+
 import Home from '../views/Home.vue'
+import menu from '../views/menu.vue'
+import cliente from '../views/cliente.vue'
+import profesional from '../views/profesional.vue'
+import agendar from '../views/agendar.vue'
+import servicio from '../views/servicio.vue'
+import signin from '../views/signin.vue'
+import signup from '../views/signup.vue'
+
 
 Vue.use(VueRouter)
 
 const routes = [
-  {
+ {
     path: '/',
     name: 'Home',
     component: Home
   },
+  
+  {
+
+  path: '/menu',
+    name: 'menu',
+    component: menu
+  },
+{
+  path: '/cliente',
+    name: 'cliente',
+    component: cliente
+  },
+
+  {
+    path: '/profesional',
+      name: 'profesional',
+      component: profesional
+    },
+  
+  {
+    path: '/servicio',
+        name: 'servicio',
+        component: servicio
+    },
+
+ {
+        path: '/signin',
+          name: 'signin',
+          component: signin
+    },
+  {
+      path: '/signup',
+        name: 'signup',
+        component: signup
+ },
+ {
+  path: '/agendar',
+    name: 'agendar',
+    component: agendar
+},
+
+
+  
   // {
   //   path: '/about',
   //   name: 'About',
