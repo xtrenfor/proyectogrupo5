@@ -1,5 +1,12 @@
 <template>
 <v-container>
+
+  <header class="header-section">       
+    <div class="banner">
+        <img src="..\assets\images\banner.jpg" alt="A banner image">
+    </div>
+  </header> 
+
     <H3> Inicio de sessión </H3>
 
   <v-form
@@ -36,7 +43,7 @@
       :disabled="!valid"
       color="success"
       class="mr-4"
-      @click="$router.push('/menu')"
+      @click="$router.push('/agendar')"
     >
       Ingresar
     </v-btn>

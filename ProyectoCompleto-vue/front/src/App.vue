@@ -1,8 +1,9 @@
 <template>
   <v-app>
-    <Header/>
+    <!--<Header/>-->
+    <!--<Navbar/>-->
     
-    <v-main>
+    <v-main style="padding: 56px 0px 0px;">
       <router-view/>
     </v-main>
   </v-app>
@@ -10,7 +11,8 @@
 
 <script>
 
-import Header from "./components/Header.vue"
+//import Header from "./components/Header.vue"
+//import Navbar from './components/Navbar.vue';
 
 export default {
   name: 'App',
@@ -19,7 +21,8 @@ export default {
     //
   }),
   components :{
-    Header,
+    //Header,
+    //Navbar,
   }
 };
 </script>

@@ -1,31 +1,39 @@
 <template>
   <v-app id="inspire">
-    <v-app-bar
-      app
-      color="white"
-      flat
-    >
-      <v-container class="py-0 fill-height">
 
-        <div class="logo-image mr-10">
-            <img src="../assets/images/logo_small.png" class="img-fluid"  size="32px">
-        </div>
+    <header class="header-section">
+    <div class="header-container">
+        <v-app-bar
+        app
+        color="white"
+        flat
+        height="0px"
+        >
+        <v-container class="py-0 fill-height">
 
-        <v-btn x-large class="mr-10" @click="$router.push('inicioAgenda')">Agenda</v-btn> 
-        <v-btn x-large @click="$router.push('signin')">Login</v-btn> 
-        <v-spacer></v-spacer>
+            <v-row>
+                <v-col class="text-left">
+                    <img src="../assets/images/logo.png" class="img-fluid" height="55px">
+                </v-col>
+                <v-col class="text-right" magin="10px">
+                    <v-btn x-large @click="$router.push('/inicioagenda')">Agenda</v-btn>   
+                    <v-btn x-large @click="$router.push('/signin')">Login</v-btn> 
+                </v-col>
+            </v-row>
 
-        <v-responsive max-width="260">
-          <v-text-field
-            dense
-            flat
-            hide-details
-            rounded
-            solo-inverted
-          ></v-text-field>
-        </v-responsive>
-      </v-container>
-    </v-app-bar>
+            <v-spacer></v-spacer>    
+        </v-container>
+        </v-app-bar>
+    </div> 
+        <!-- Fin menú navegación -->
+
+        
+    <div class="banner">
+        <img src="..\assets\images\banner.jpg" alt="A banner image">
+    </div>
+    </header>
+     
+     
 
     <v-main class="grey lighten-3">
       <body>
@@ -41,7 +49,7 @@
                     </div>
                 </article>
                 <v-sheet
-              min-height="70vh"
+              min-height="0vh"
               rounded="lg"
               color="transparent"
             >    
@@ -249,16 +257,6 @@
   </v-app>
 </template>
 
-
-
-<script>
-
-export default {
-    
-}
-
-
-</script>
 
 <style>
 

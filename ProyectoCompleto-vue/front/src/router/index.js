@@ -77,7 +77,11 @@ const routes = [
     name: 'ListaCitas',
     component: () => import('../views/Admin/ListaCitas.vue')
   },
-   
+  {
+    path: '/seccionservicios',
+    name: 'SeccionServicios',
+    component: () => import('../components/SeccionServicios.vue')
+  },
 ]
 
 const router = new VueRouter({

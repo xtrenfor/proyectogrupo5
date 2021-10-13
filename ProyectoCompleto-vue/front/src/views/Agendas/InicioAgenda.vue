@@ -10,19 +10,9 @@
         <v-btn @click="$router.push('/')">Página Principal</v-btn> 
         <v-spacer></v-spacer>
 
-        <v-responsive max-width="260">
-          <v-text-field
-            dense
-            flat
-            hide-details
-            rounded
-            solo-inverted
-          ></v-text-field>
-        </v-responsive>
       </v-container>
     </v-app-bar>
-
-    <v-main class="grey lighten-3">
+    <v-main class="grey lighten-3" style="padding: 56px 0px 0px;">
       <v-container>
         <v-row>
           <v-col cols="2">

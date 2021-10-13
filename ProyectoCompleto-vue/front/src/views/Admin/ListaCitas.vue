@@ -7,7 +7,7 @@
       flat
     >
     </v-app-bar>
-    <v-btn @click="guardar">Programar cita</v-btn>
+    <v-btn @click="$router.push('/agendar')">Formularios</v-btn>   
     <v-card-title>
       Citas
       <v-spacer></v-spacer>
@@ -31,7 +31,6 @@
   import {
     
     getAllCitasAdmin,
-    insertBook
   } from "../../services/CitasServices";
 
   export default {
@@ -61,18 +60,6 @@
         })
         .catch((err) => console.error(err));
     },
-    methods: {
-      guardar () {
-        const book = {
-          isbn: "sdfsdfsdf",
-          titulo: "Nuevo libro",
-          anio: "2021",
-          autores: ["Autor"],
-          genero: "sgfdsdfgs"
-          }
-          insertBook(book)
-      }
-    }
   }
   
 </script>
