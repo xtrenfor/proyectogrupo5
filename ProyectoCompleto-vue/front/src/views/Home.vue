@@ -40,6 +40,72 @@
                     <div class="news-header">   
                     </div>
                 </article>
+                <v-sheet
+              min-height="70vh"
+              rounded="lg"
+              color="transparent"
+            >    
+              <v-container class="grey lighten-5">
+              <v-row no-gutters>
+                <v-col order="first">
+                  <v-card class="mx-auto" max-width="250" margin="50px">
+                    <!--
+                    <v-img
+                    src="../assets/images/Peinado-1.jpg"
+                    height="200px"
+                    ></v-img>
+                    -->
+
+                    <v-card-title class="card-header text-center">
+                      <p style="width: 200px; white-space: normal;">
+                      Servicio 1 :
+                      </p>
+                      <p style="width: 200px; white-space: normal;">
+                      <BR />
+                      </p>
+                    </v-card-title>
+                </v-card>
+                </v-col>
+                <v-col order="second">
+                  <v-card class="mx-auto" max-width="250" margin="50px">
+                    <!--
+                    <v-img
+                    src="../assets/images/Peinado-1.jpg"
+                    height="200px"
+                    ></v-img>
+                    -->
+                    <v-card-title class="card-header text-center">
+                      <p style="width: 200px; white-space: normal;">
+                      Servicio 2 :
+                      </p>
+                      <p style="width: 200px; white-space: normal;">
+                      <BR />
+                      </p>
+                    </v-card-title>
+                </v-card>
+                </v-col>
+                <v-col order="last">
+                  <v-card class="mx-auto" max-width="250" margin="50px">
+                    <!--
+                    <v-img
+                    src="../assets/images/Peinado-1.jpg"
+                    height="200px"
+                    ></v-img>
+                    -->
+                    <v-card-title class="card-header text-center">
+                      <p style="width: 200px; white-space: normal;">
+                      Servicio 3 :
+                      </p>
+                      <p style="width: 200px; white-space: normal;">
+                      <BR />
+                      </p>
+                    </v-card-title>
+                </v-card>
+                </v-col>
+              </v-row>
+            </v-container>
+
+            </v-sheet>
             </div>
             <!-- fin sección de noticias -->
 
