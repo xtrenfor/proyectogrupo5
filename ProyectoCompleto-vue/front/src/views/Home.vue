@@ -12,7 +12,7 @@
         </div>
 
         <v-btn x-large class="mr-10" @click="$router.push('inicioAgenda')">Agenda</v-btn> 
-        <v-btn x-large @click="$router.push('about')">Login</v-btn> 
+        <v-btn x-large @click="$router.push('signin')">Login</v-btn> 
         <v-spacer></v-spacer>
 
         <v-responsive max-width="260">
@@ -166,7 +166,7 @@
                 <article class="news-info">
                     <div class="news-header">
                         <img class="news-info__imagen" src="../assets/images/carnashian.jpg" alt="">
-                        <h3 class="news-info__title">El corte de pelo ‘bob Kardashian’ ha vuelto</h3>
+                        <h3 class="news-info__title">El corte de pelo bob Kardashian ha vuelto</h3>
                     </div>
                     <p class="news-info__text">
                         Hace exactamente tres años que las Kardashian consiguieron que un <u>corte de pelo</u> de toda la vida -el blunt bob, carré o media melena recta- se convirtiera en <u>el corte de pelo del momento</u>.
