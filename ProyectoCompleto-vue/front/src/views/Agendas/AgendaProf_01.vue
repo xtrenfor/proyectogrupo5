@@ -116,9 +116,12 @@
       events:[],
     }
     ),
-       
+    
+    
+
     mounted() {
       this.$refs.calendar.scrollToTime('08:00');
+
       
       verAgendaProf_01()
         .then((response) => {

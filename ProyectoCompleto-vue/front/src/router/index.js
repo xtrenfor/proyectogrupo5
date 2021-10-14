@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import agendar from '../views/agendar.vue'
 import cliente from '../views/cliente.vue'
-import menu from '../views/menu.vue'
+
 import profesional from '../views/profesional.vue'
 import servicio from '../views/servicio.vue'
 import signin from '../views/signin.vue'
@@ -36,11 +36,6 @@ const routes = [
     component: servicio
   },
 
-  {
-    path: '/menu',
-    name: 'menu',
-    component: menu
-  },
   {
     path: '/cliente',
     name: 'cliente',
@@ -76,11 +71,6 @@ const routes = [
     path: '/listaCitas',
     name: 'ListaCitas',
     component: () => import('../views/Admin/ListaCitas.vue')
-  },
-  {
-    path: '/seccionservicios',
-    name: 'SeccionServicios',
-    component: () => import('../components/SeccionServicios.vue')
   },
 ]
 

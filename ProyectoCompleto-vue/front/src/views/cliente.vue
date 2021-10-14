@@ -111,6 +111,7 @@
                   Ingresar
                 </v-btn>
 
+                <!--
                 <v-btn
                   color="error"
                   class="mr-4"
@@ -118,6 +119,7 @@
                 >
                   Menu
                 </v-btn>
+                -->
 
               
               </v-form>
