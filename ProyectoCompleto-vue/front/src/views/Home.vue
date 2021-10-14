@@ -13,7 +13,7 @@
 
             <v-row>
                 <v-col class="text-left">
-                    <img src="../assets/images/logo.png" class="img-fluid" height="55px">
+                    <img src="../assets/images/logo.png"  height="55px">
                 </v-col>
                 <v-col class="text-right" magin="10px">
                     <v-btn x-large @click="$router.push('/inicioagenda')">Agenda</v-btn>   
@@ -41,86 +41,12 @@
          <!-- inicio contenido principal -->
         
             <!-- inicio sección de servicios -->
-            <h2 class="titulos">Servicio</h2>
-            
-            <div id="noticias" class="seccion-noticias">
-                <article class="news-info">
-                    <div class="news-header">   
-                    </div>
-                </article>
-                <v-sheet
-              min-height="0vh"
-              rounded="lg"
-              color="transparent"
-            >    
-              <v-container class="grey lighten-5">
-              <v-row no-gutters>
-                <v-col order="first">
-                  <v-card class="mx-auto" max-width="250" margin="50px">
-                    <!--
-                    <v-img
-                    src="../assets/images/Peinado-1.jpg"
-                    height="200px"
-                    ></v-img>
-                    -->
-
-                    <v-card-title class="card-header text-center">
-                      <p style="width: 200px; white-space: normal;">
-                      Servicio 1 :
-                      </p>
-                      <p style="width: 200px; white-space: normal;">
-                      <BR />
-                      </p>
-                    </v-card-title>
-                </v-card>
-                </v-col>
-                <v-col order="second">
-                  <v-card class="mx-auto" max-width="250" margin="50px">
-                    <!--
-                    <v-img
-                    src="../assets/images/Peinado-1.jpg"
-                    height="200px"
-                    ></v-img>
-                    -->
-                    <v-card-title class="card-header text-center">
-                      <p style="width: 200px; white-space: normal;">
-                      Servicio 2 :
-                      </p>
-                      <p style="width: 200px; white-space: normal;">
-                      <BR />
-                      </p>
-                    </v-card-title>
-                </v-card>
-                </v-col>
-                <v-col order="last">
-                  <v-card class="mx-auto" max-width="250" margin="50px">
-                    <!--
-                    <v-img
-                    src="../assets/images/Peinado-1.jpg"
-                    height="200px"
-                    ></v-img>
-                    -->
-                    <v-card-title class="card-header text-center">
-                      <p style="width: 200px; white-space: normal;">
-                      Servicio 3 :
-                      </p>
-                      <p style="width: 200px; white-space: normal;">
-                      <BR />
-                      </p>
-                    </v-card-title>
-                </v-card>
-                </v-col>
-              </v-row>
-            </v-container>
-
-            </v-sheet>
-            </div>
-            <!-- fin sección de noticias -->
-
-        <!-- inicio contenido principal -->
+            <SeccionServicios/>
+            <!-- fin sección de servicios -->
         
-            <h2 class="titulos">Noticias</h2>
             <!-- inicio sección de noticias -->
+            <div class="mt-7">
+                <h2 class="titulos">Noticias</h2>
             <div id="noticias" class="seccion-noticias">
                 <article class="news-info">
                     <div class="news-header">
@@ -181,8 +107,8 @@
                     
                     </p>
                 </article>
-
-        </div>
+            </div>
+            </div>
             <!-- fin sección de noticias -->
 
         <div>
@@ -445,11 +371,29 @@ body {
     border-radius: 30%;
 }
 
+/*
 .logo-image{
     width: 400px;
     height: 100px;
     overflow: hidden;
     margin-top: 10px;
 }
+*/
+
 
 </style>
+
+<script>
+import SeccionServicios from "../components/SeccionServicios.vue"
+
+export default {
+  name: 'Home',
+
+  data: () => ({
+    //
+  }),
+  components :{
+    SeccionServicios
+  }
+};
+</script>
