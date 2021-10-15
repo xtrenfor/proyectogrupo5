@@ -80,6 +80,16 @@ module.exports = class BooksController {
     }
   };
 
+  static async insertCita (request, response) {
+    try {
+      const document = request.body;
+      const cita = await citasModel.create(document);
+      response.status(200).json(cita);
+    } catch (error) {
+      response.status(400).json({message: error.message});
+    }
+  }
+
 
 }
 

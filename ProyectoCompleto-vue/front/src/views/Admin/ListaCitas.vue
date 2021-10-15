@@ -38,16 +38,13 @@
       return {
         search: '',
         headers: [
-          {
-            text: 'Id_codigo_age',
-            align: 'start',
-            value: 'Id_codigo_age',
-          },
-          { text: 'Id_cedula_pro', value: 'Id_cedula_pro' },
-          { text: 'Servicio_pro', value: 'Servicio_pro' },
+          
+          { text: 'Cliente', value: 'Id_cedula_cli' },
+          { text: 'Profesional', value: 'Id_cedula_pro' },
+          { text: 'Servicio', value: 'Servicio_pro' },
           { text: 'Inicio', value: 'Inicio' },
           { text: 'Fin', value: 'Fin' },
-          { text: 'Id_cedula_cli', value: 'Id_cedula_cli' },
+          
         ],
         desserts: [],
       }
