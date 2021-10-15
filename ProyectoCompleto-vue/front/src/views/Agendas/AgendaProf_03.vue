@@ -32,7 +32,7 @@
 
                 <v-card class="mx-auto" max-width="143" margin="50px">
                     <v-img
-                    src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+                    src="../../assets/imagen_perfil.jpg"
                     height="200px"
                     ></v-img>
                     <v-card-title>Ana</v-card-title>
@@ -111,7 +111,7 @@
   
   export default {
     data: () => ({
-      today: '2021-10-14',
+      today: '2021-10-15',
       events:[],
     }
     ),
