@@ -111,7 +111,7 @@
   
   export default {
     data: () => ({
-      today: '2021-10-12',
+      today: '2021-10-14',
       events:[],
     }
     ),

@@ -56,13 +56,6 @@
               <H3> Formulario agendar </H3>
 
               <v-form>
-          
-                <v-text-field
-                  input
-                  v-model="Id_codigo_age"
-                  label="Id Cita"
-                  
-                ></v-text-field>
 
                 <v-text-field
                   input
