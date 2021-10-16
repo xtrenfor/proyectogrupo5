@@ -40,23 +40,22 @@ routercliente.get('/Cliente/:id', async (req, res)=>{
     }
 });
 
+routercliente.get('/Cliente', async (req, res)=>{
 
-routercliente.get('/Cliente', passport.authenticate('jwt', {session: false}), async (req, res)=>{
-    const token = getToken(req.headers)
-    if (token){
+
     try{
+
         const ClienteDB= await Cliente.find();
         res.json(ClienteDB)
-        } catch (error) {
+    
+    } catch (error) {
+
         return res.status(500).json({
             mensaje: 'ocurrio un error',
             error
-        })}
-    } else {
-        return res.status(403).send({success: false, msg: 'Sin Autorización!'})
+        })
     }
 });
-
 
 routercliente.delete('/Cliente/:id', async (req, res)=>{
 
