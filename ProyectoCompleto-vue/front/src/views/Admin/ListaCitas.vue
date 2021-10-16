@@ -23,7 +23,6 @@
       :headers="headers"
       :items="desserts"
       :search="search"
-      
     ></v-data-table>
   </v-card>
 </template>
@@ -40,7 +39,6 @@
         search: '',
         headers: [
           
-          { text: 'id_Cita', value: 'Id_codigo_age' },
           { text: 'Cliente', value: 'Id_cedula_cli' },
           { text: 'Profesional', value: 'Id_cedula_pro' },
           { text: 'Servicio', value: 'Servicio_pro' },

@@ -59,13 +59,6 @@
 
                 <v-text-field
                   input
-                  v-model="Id_codigo_age"
-                  label="Id_cita"
-                  
-                ></v-text-field>
-
-                <v-text-field
-                  input
                   v-model="Id_cedula_cli"
                   label="Nombre Cliente"
                   
@@ -102,14 +95,10 @@
                 >
                   Guardar
                 </v-btn>
+
                 <v-btn
-                color="error"
+                  color="error"
                   class="mr-4"
-                >
-                  Eliminar
-                </v-btn>
-                <v-btn
-                  
                   @click="$router.push('/listaCitas')"
                 >
                   Listado de Citas
