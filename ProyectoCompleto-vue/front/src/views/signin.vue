@@ -3,11 +3,14 @@
 
   <header class="header-section">       
     <div class="banner">
-        <img src="..\assets\images\banner.jpg" alt="A banner image">
+        <img src="..\assets\images\logo.png" alt="A banner image">
+        <p></p>
+        <p></p>
+        <p></p>
     </div>
   </header> 
 
-    <H3> Inicio de sessión </H3>
+    <H2> Inicio de sesión </H2>
 
   <v-form
     ref="form"
@@ -25,19 +28,12 @@
 
     <v-text-field
       v-model="name"
-      :counter="8"
+      type = 'password'
+      :counter="5"
       :rules="nameRules"
       label="Contraseña"
       required
     ></v-text-field>
-
-
-    <v-checkbox
-      v-model="checkbox"
-      :rules="[v => !!v || 'Selecciona para continuar!']"
-      label="Deseas continuar?"
-      required
-    ></v-checkbox>
 
     <v-btn
       :disabled="!valid"
@@ -74,7 +70,7 @@
       contraseña: '',
       nameRules: [
         v => !!v || 'se requiere contraseña',
-        v => (v && v == 12345) || 'la contraseña es de 5 caracteres',
+        v => (v && v == 12345) || 'Por favor ingrese una contraseña con las condiciones solicitadas',
       ],
   
       checkbox: false,
@@ -90,3 +86,18 @@
     },
   }
 </script>
+
+<style scoped>
+
+h2 {
+  text-align:center;
+  color: #06739edc;
+  }
+
+header {
+  display:block;
+  margin:auto;
+  height:83%;
+  width: 83%;
+  }
+</style>

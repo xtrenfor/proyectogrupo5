@@ -7,6 +7,8 @@ import cliente from '../views/cliente.vue'
 import profesional from '../views/profesional.vue'
 import servicio from '../views/servicio.vue'
 import signin from '../views/signin.vue'
+import Register from '../views/Register'
+
 
 Vue.use(VueRouter)
 
@@ -28,6 +30,12 @@ const routes = [
     path: '/agendar',
     name: 'agendar',
     component: agendar
+  },
+
+  {
+    path: '/register',
+    name: 'Register',
+    component: Register
   },
 
   {
